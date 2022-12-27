@@ -25,4 +25,12 @@
 25.DELETE FROM books WHERE author = 'Lin'; -- deleted the row with the author lin, if multiple authors were named lin then they would be erased too.
 26. DELETE FROM books WHERE genre = 'Horror'; --deleted all horror genres. 
 27.DELETE FROM books; -- deletes all records from the books table.
-28.
+28.--select top clause
+29.
+30.
+31.
+32.
+33.
+34.
+35.
+36.
