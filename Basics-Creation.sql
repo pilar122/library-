@@ -21,4 +21,3 @@
 14.INSERT INTO books VALUES (10,'Lancom','1995-08-08','Non-Fiction','Mine');
 15.INSERT INTO books VALUES (11,'Yojab','1911-11-11','Romance','Jury');
 16.INSERT INTO books VALUES (12,'Mary','1899-05-03','Fantasy','Yarma');
-17.SELECT * FROM books; --to see all the information in the table.
