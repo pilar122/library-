@@ -23,14 +23,14 @@
 23.SELECT * FROM books WHERE genre IS NOT NULL; -- shows everything that is not null from the genre column.
 24.UPDATE books SET genre = 'Fantasy' WHERE genre IS NULL; -- to change where value is null, you have to put IS NULL instead of = 'NULL'.
 25.DELETE FROM books WHERE author = 'Lin'; -- deleted the row with the author lin, if multiple authors were named lin then they would be erased too.
-26. DELETE FROM books WHERE genre = 'Horror'; --deleted all horror genres. 
+26.DELETE FROM books WHERE genre = 'Horror'; --deleted all horror genres. 
 27.DELETE FROM books; -- deletes all records from the books table.
-28.--select top clause
-29.
-30.
-31.
-32.
-33.
-34.
+28.SELECT * FROM books LIMIT 3; --outputs a limit of 3 from rows.
+29.SELECT MAX(book_id) AS Maxid FROM books; --max from the id column is diplayed, can be MIN as well.
+30.SELECT COUNT(book_id) FROM books; -- finds the total number.
+31.SELECT AVG(genre) FROM books; -- average genre.
+32.SELECT SUM(book_id) FROM books; --sums up all the values in this row.
+33.SELECT * FROM books WHERE genre LIKE 'n%'; --eneding in n for the genre column.
+34.SELECT * FROM books WHERE genre LIKE '%n'; --starting with the n letter.
 35.
 36.
