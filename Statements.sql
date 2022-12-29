@@ -32,5 +32,53 @@
 32.SELECT SUM(book_id) FROM books; --sums up all the values in this row.
 33.SELECT * FROM books WHERE genre LIKE 'n%'; --eneding in n for the genre column.
 34.SELECT * FROM books WHERE genre LIKE '%n'; --starting with the n letter.
-35.
-36.
+35.SELECT * FROM books WHERE genre LIKE '%or%'; --output is genres that include 'or' anywhere in the word(s).
+36.SELECT * FROM books WHERE genre LIKE '_i%'; --selects all generes that have 'i' in the second position.
+37.SELECT * FROM books WHERE genre LIKE 'R__%'; --genre starts with an r and are at least 3 characters in length.
+38.SELECT * FROM books WHERE genre LIKE 'c%s'; --starts with c and ends in s.
+39.SELECT * FROM books WHERE genre NOT LIKE 'a%'; --does not start with a.
+40.SELECT * FROM books WHERE genre LIKE '_iction'; --starting with any character followed by iction.
+41.SELECT * FROM books WHERE title LIKE 'Y_r_a'; --starting with y, followed by any character, then r, any character, then a.
+42.SELECT * FROM books WHERE title LIKE '[tjym]%'; --title starting with tjy or m. ((
+43.SELECT * FROM books WHERE title LIKE '[a-z]%'; --starting with all the letters between a-z. ((
+44.SELECT * FROM books WHERE title LIKE '[!fya]%'; --not starting with fya. ((
+45.SELECT * FROM books WHERE title NOT LIKE '[fya]%'; --not starting with fya.
+46.SELECT * FROM books WHERE author IN ('Erik','Lin','Mary'); -- selects authors with the names.
+47.SELECT * FROM books WHERE author NOT IN ('Erik','Lin','Mary'); --selects authors that do not include these.
+48.SELECT * FROM books WHERE title IN (SELECT title FROM author); --selects all books that are of the same title as the ___.
+49.ALTER TABLE books ADD COLUMN numbers INT; --added column numbers.
+50.UPDATE books SET numbers = 1 WHERE numbers IS NULL AND book_id !=9; --to change the null values in the column that was created from  null to a number exept for one row.
+51.UPDATE books SET numbers = COALESCE(numbers,1); --this replaces null values to a specific value.
+52.UPDATE books SET numbers = 100 WHERE numbers = 1 AND book_id = 6; --set numbers to 100 where is 6.
+53.SELECT * FROM books WHERE numbers BETWEEN 20 AND 80; -- pulls the numbers that range from 20 and 80.
+54.SELECT * FROM books WHERE numbers NOT BETWEEN 1 AND 99; -- all the numbers that dont include the numbers between theses digits.
+55.SELECT * FROM books WHERE numbers BETWEEN 10 AND 101 AND book_id NOT IN (2,3,4); --selects numbers between 10-101 and does not show products with a book_id of 2,3,4.
+56.SELECT * FROM books WHERE genre BETWEEN 'Fiction' AND 'Romance' ORDER BY genre; --name from fiction and romance and orders in asc.
+57.SELECT * FROM books WHERE genre NOT BETWEEN 'Fantasy' AND 'Childrens' ORDER BY genre; --not between.
+58.SELECT genre AS genre2 FROM books; --Alias column, last for the duration of the query.
+59.CREATE TABLE water ( -- created a new table.
+    -> water_id INT PRIMARY KEY,
+    -> flavor VARCHAR(10),
+    -> color VARCHAR(10),
+    -> ounces INT
+    -> );
+60.INSERT INTO water VALUES (1,'Lime','blue',90); --values for this table.
+61.ALTER TABLE water ADD numbers INT; --adding a common column between water and books table.
+62.UPDATE water SET numbers = 1 WHERE numbers IS NULL;
+--joins 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
